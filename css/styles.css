@@ -7,13 +7,13 @@
   --main-bg-color: #F5F4FA;;
   --secondary-bg-color: #2f303a;
   --main-icon-color: #afb1b8;
-  --duration-cubic:2500ms cubic-bezier(0.4, 0, 0.2, 1)
+  --duration-cubic:5000ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /*            BODY             */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;  
   color: var(--prymary-text-color);
   background-color: var(--white-color);
   letter-spacing: 0.03em;
@@ -581,11 +581,6 @@ img {
   align-items: baseline;
 }
 
-.join-container {
-  margin-right: 93px;
-
-}
-
 .join-title {
   font-weight: 700;
   color: var(--white-color);
@@ -627,6 +622,7 @@ img {
 .footer-form {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 
 .footer-form-title {
@@ -652,6 +648,7 @@ img {
   background-color: transparent;
   padding: 15px 16px;
   outline: transparent;
+  padding-left: 65px;
 
   letter-spacing: 0.03em;
   color: var(--white-color);
@@ -796,12 +793,10 @@ img {
   transition: border-color var(--duration-cubic);
 }
 
-.modal-form-input:hover,
 .modal-form-input:focus {
   border: 1px solid var(--accent-color);
 }
 
-.modal-form-input:hover + .modal-form-icon,
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--accent-color);
 }
@@ -837,7 +832,6 @@ img {
   outline: none;
 }
 
-.modal-form-textarea:hover,
 .modal-form-textarea:focus {
   border: 1px solid var(--accent-color);
 }
@@ -851,9 +845,6 @@ img {
 }
 
 .modal-form-policy {
-  display: flex;
-  justify-content: center;
-
   margin-bottom: 30px;
 }
 
@@ -866,8 +857,42 @@ img {
   line-height: calc(24/14);
   letter-spacing: 0.03em;
 
-  margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.label-policy span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+
+  transition: background-color var(--duration-cubic),
+    border-color var(--duration-cubic);
+
+}
+
+.policy-icon {
+  fill: transparent;
+
+  transition: fill var(--duration-cubic);
+}
+
+.form-policy-input:checked + .label-policy span {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.form-policy-input:checked + .label-policy .policy-icon {
+  fill: var(--white-color);
+}
+
 
 .form-policy-link {
   color: var(--accent-color);
@@ -875,6 +900,7 @@ img {
   font-size: 14px;
   line-height: calc(24/14);
   letter-spacing: 0.03em;
+  margin-left: 4px;
   
   position: relative;
 }
