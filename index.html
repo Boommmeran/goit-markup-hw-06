@@ -457,10 +457,19 @@
           </ul>
         </div>
         <form class="footer-form">
-          <b class="footer-form-title">Підпишіться на розсилку</b>
           <div class="input-container">
-            <input type="email" id="footer-form" class="footer-input" name="footer-mail"/>
-            <label for="footer-form" class="footer-form-label">E-mail</label>
+            <div class="footer-wrap">
+              <label for="footer-form" class="footer-form-label"
+                ><b>Підпишіться на розсилку</b></label
+              >
+              <input
+                type="email"
+                id="footer-form"
+                class="footer-input"
+                name="footer-mail"
+                placeholder="E-mail"
+              />
+            </div>
             <button type="submit" class="footer-form-button">
               Підписатися
               <svg class="footer-form-icon" width="24" height="24">
@@ -550,7 +559,6 @@
               Погоджуюся з розсилкою та приймаю
               <a href="" class="form-policy-link link">Умови договору</a>
             </label>
-            
           </div>
           <button type="submit" class="modal-form-btn">Відправити</button>
         </form>
